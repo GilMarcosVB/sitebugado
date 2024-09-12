@@ -48,7 +48,7 @@
             <ul>
                 <li><a href={{ asset('sobre-nos') }}>Sobre nós</a></li>
                 <li><a href={{ asset('#secao2') }}>Localização</a></li>
-                <li"><a href={{ asset('#secao3') }}>Fotos</a></li>
+                <li><a href={{ asset('#secao3') }}>Fotos</a></li>
                 <!--<li><a href="#secao4">Sobre nós</a></li> -->
             </ul>
         </nav>
@@ -137,9 +137,10 @@
                     <br>
                     8h - 14h
                 </h2>
-                {{-- <img class="logohorario" src="../img/fundohorario.jpg"> --}}
+
                 <style>
                     #secao-categoria2 {
+
                         width: 1100px;
                         height: 300px;
                         background-image: url('../img/fundohorario.jpg');
@@ -149,7 +150,7 @@
                         background-position: center;
                         /* Centraliza a imagem */
                     }
-                </st>
+                </style>
             </section>
         </div>
 
@@ -184,61 +185,22 @@
                 <div class="lista-card-servicos">
                     <!--PLANO SEMANAL-->
                     @foreach ($planos as $plano)
-
                         <div class="card-servicos">
                             <div class="card-foto">
-                                <img src="{{asset("/storage/" . $plano->imagem)}}" alt="Plano Semanal" />
-                            
+                                <img src="{{ asset('/storage/' . $plano->imagem) }}" alt="Plano Semanal" />
+
                                 <div class="card-foto-legenda">
-                                    <div class="card-foto-preco"> R$ {{ number_format($plano->preco, 2, ',', '.') }}</div>
+                                    <div class="card-foto-preco"> R$ {{ number_format($plano->preco, 2, ',', '.') }}
+                                    </div>
 
                                     <div id="botaoplano" class="card-foto-categoria">
-                                        <a href="asset {{'duracao'}}">{{ $plano->nome_plano}}</a>
+                                        <a href="asset {{ 'duracao' }}">{{ $plano->nome_plano }}</a>
                                     </div>
                                 </div>
                             </div>
                             <div class="card-descricao"></div>
                         </div>
                     @endforeach
-
-
-                    <!--PLANO SEMANAL-->
-
-                    <!--PLANO MENSAL-->
-
-                    {{-- <div class="card-servicos">
-                        <div class="card-foto">
-                            <img src="img/planomensal.jpg" alt="Plano Mensal" />
-
-                            <div class="card-foto-legenda">
-                                <div class="card-foto-preco">R$ 60,00</div>
-                                <div id="botaoplano" class="card-foto-categoria">
-                                    <a href={{ asset('formulariomatricula2.html') }} href="#">MENSAL</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card-descricao"></div>
-                    </div>
-                    <!--PLAMNO MENSAL-->
-
-                    <!--PLANO ANUAL-->
-                    <div class="card-servicos">
-                        <div class="card-foto">
-                            <img src="img/planoanual.jpg" alt="Plano Anual" />
-                            <div class="card-foto-legenda">
-                                <div class="card-foto-preco">R$ 300,00</div>
-                                <div id="botaoplano" class="card-foto-categoria">
-                                    <a href={{ asset('formulariomatricula3.html') }}>ANUAL</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-descricao"></div>
-                    </div>
-                    <!--PLANO ANUAL-->
-                </div>
-            </section>
-        </div> --}}
     </main>
 
     <footer id="rodape">

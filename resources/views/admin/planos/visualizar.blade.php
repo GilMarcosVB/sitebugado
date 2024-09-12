@@ -7,7 +7,7 @@
     <table class="table table-striped">
         <tr>
             <th>ID</th>
-            <td>{{ $plano->id}}</td>
+            <td>{{ $plano->id }}</td>
         </tr>
         <tr>
             <th>Nome</th>
@@ -23,7 +23,7 @@
         </tr>
         <tr>
             <th>Preço</th>
-            <td>{{ $plano->preco}}</td>
+            <td>{{ $plano->preco }}</td>
         </tr>
     </table>
     <a href="{{ route('plano.edit', ['id' => $plano->id]) }}" class="btn btn-primary">Editar</a>

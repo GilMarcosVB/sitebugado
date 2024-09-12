@@ -28,7 +28,7 @@
                 <th>Imagem</th>
                 <th>Duração</th>
                 <th>Preço</th>
-
+                
             </tr>
         </thead>
         <tbody>
@@ -38,7 +38,7 @@
                     <td>{{ $plano->id }}</td>
                     <td>{{ $plano->nome_plano }}</td>
                     <td>{{ $plano->imagem }}</td>
-                    <td>{{ $plano->duracao }}</td>
+                    <td>{{ $plano->duracao}}</td>
                     <td>{{ $plano->preco }}</td>
                     <td>
                         <a href="{{ route('plano.show', ['id' => $plano->id]) }}" class="btn btn-primary">Visualizar</a>
